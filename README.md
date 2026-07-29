@@ -36,4 +36,4 @@ El objetivo principal de este proyecto es descubrir patrones latentes y relacion
 
 1. Clona el repositorio:
    ```bash
-   git clone [https://github.com/tu-usuario/Spanish-Census-Multivariate-Analysis.git](https://github.com/tu-usuario/Spanish-Census-Multivariate-Analysis.git)
+   git clone [https://github.com/sergiovalidomartel2005/Spanish-Census-Multivariate-Analysis.git](https://github.com/sergiovalidomartel2005/Spanish-Census-Multivariate-Analysis.git)
