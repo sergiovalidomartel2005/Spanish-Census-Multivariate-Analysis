@@ -1,23 +1,23 @@
 # Análisis Multivariante y Clustering Sociodemográfico de Secciones Censales en España
 
-Este repositorio contiene un pipeline analítico completo desarrollado en **R** para el procesamiento, análisis exploratorio (EDA), reducción de dimensionalidad y segmentación (clustering) de datos electorales y demográficos a nivel de sección censal en España (Elecciones Generales 2023).
+Este repositorio contiene un pipeline analítico completo desarrollado en **R** para el procesamiento, análisis exploratorio (EDA), reducción de dimensionalidad y segmentación (clustering) de datos electorales y socio-demográficos a nivel de sección censal en España.
 
 El objetivo principal de este proyecto es descubrir patrones latentes y relaciones no lineales entre variables socioeconómicas (renta, ocupación, nivel educativo, edad) y el comportamiento electoral, lidiando con un conjunto de datos masivo y con ruido del mundo real.
 
-## 🛠️ Stack Tecnológico y Librerías Principales
-* **Manipulación y Limpieza:** `dplyr`, `VIM` (K-Nearest Neighbors Imputation), `editrules` (Data Validation).
+## Stack Tecnológico y Librerías Principales
+* **Manipulación y Limpieza:** `dplyr`, `VIM`, `editrules`.
 * **Análisis Multivariante:** `FactoMineR`, `factoextra`, `cluster`, `psych`, `DescTools`.
 * **Visualización y Geoespacial:** `ggplot2`, `sf`, `mapSpain`, `plotly`, `crosstalk`.
 
-## 🧠 Arquitectura del Análisis y Metodología
+## Arquitectura del Análisis y Metodología
 
-### 1. Preprocesamiento e Integridad de Datos (Data Pipeline)
+### 1. Preprocesamiento e Integridad de Datos
 * **Ingeniería de Variables:** Transformación de variables crudas en indicadores clave (e.g., agregación de bloques políticos, tasas de abstención y paro).
 * **Imputación Estocástica:** Manejo de variables faltantes (NAs) mediante el algoritmo **k-Nearest Neighbors (kNN)**, validando la distribución de los datos imputados vs. originales mediante gráficos de densidad para evitar sesgos.
 * **Control de Calidad:** Implementación de matrices lógicas (`editrules`) para garantizar la integridad estructural de las observaciones (ej. $Abstención \le Censo$).
 
-### 2. Análisis Exploratorio y Contrastes de Hipótesis (EDA)
-* **Detección de Outliers:** Identificación paramétrica usando el Rango Intercuartílico (IQR).
+### 2. Análisis Exploratorio y Contrastes de Hipótesis 
+* **Detección de Outliers:** Identificación paramétrica usando el Rango Intercuartílico.
 * **Tests de Normalidad:** Evaluación de distribuciones asimétricas (ej. Renta, Edad) mediante el Test de Lilliefors y gráficos QQ.
 * **Correlación y Dependencia:** * Matrices de correlación de Spearman para variables cuantitativas no paramétricas.
   * Contrastes $\chi^2$ y *G-Test* (Cociente de Verosimilitudes) para tablas de contingencia.
@@ -32,7 +32,7 @@ El objetivo principal de este proyecto es descubrir patrones latentes y relacion
 * **Clustering sobre PCA:** Validación de la consistencia y robustez de los clústeres ejecutando K-Means sobre las coordenadas proyectadas del PCA.
 * **Clustering Jerárquico (Ward):** Construcción de dendrogramas basados en distancias euclídeas para evaluar la estructura jerárquica de la población española.
 
-## 🚀 Cómo ejecutar el código
+## Cómo ejecutar el código
 
 1. Clona el repositorio:
    ```bash
